@@ -1,0 +1,5 @@
+@startuml
+class SplitwiseService { +addExpense(expense) +balanceBetween(a,b) }
+class BalanceSheet { +addDebt(from,to,amount) +getBalance(from,to) }
+SplitwiseService --> BalanceSheet
+@enduml

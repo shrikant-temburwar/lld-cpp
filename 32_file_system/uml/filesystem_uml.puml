@@ -1,0 +1,7 @@
+@startuml
+class FileSystem { +createFile(path) +createDir(path) +list(path) }
+class DirNode
+class FileNode
+FileSystem --> DirNode
+DirNode --> FileNode
+@enduml

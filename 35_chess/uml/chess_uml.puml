@@ -1,0 +1,5 @@
+@startuml
+class Board { +move(r1,c1,r2,c2) +at(r,c) }
+class Piece { +type +color }
+Board --> Piece
+@enduml

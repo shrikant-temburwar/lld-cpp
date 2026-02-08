@@ -1,0 +1,5 @@
+@startuml
+class VersionedFileSystem { +write(path,content) +read(path,version) +latestVersion(path) }
+class VersionedFile { +write(content) +read(version) }
+VersionedFileSystem --> VersionedFile
+@enduml

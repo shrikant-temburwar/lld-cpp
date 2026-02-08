@@ -1,0 +1,5 @@
+@startuml
+class Board { +addSnake(from,to) +addLadder(from,to) +move(pos,roll) }
+class Game { +playTurn(roll) +winner() }
+Game --> Board
+@enduml

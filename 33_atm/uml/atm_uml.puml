@@ -1,0 +1,5 @@
+@startuml
+class ATM { +withdraw(accountId, amount) +checkBalance(accountId) }
+class BankService { +withdraw(id, amount) +balance(id) }
+ATM --> BankService
+@enduml

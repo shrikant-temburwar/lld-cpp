@@ -1,0 +1,5 @@
+@startuml
+class Cart { +add(product,qty) +remove(id) +total() }
+class Product { +id +price }
+Cart --> Product
+@enduml
