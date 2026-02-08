@@ -1,0 +1,7 @@
+@startuml
+class DistributedCache { +put(key,value) +get(key) }
+class HashRing { +addNode(nodeId) +getNode(key) }
+class CacheNode { +put(key,value) +get(key) }
+DistributedCache --> HashRing
+DistributedCache --> CacheNode
+@enduml

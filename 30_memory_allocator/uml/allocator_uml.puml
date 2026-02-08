@@ -1,0 +1,5 @@
+@startuml
+class MemoryAllocator { +allocate(size) +free(block) +freeBytes() }
+class MemoryBlock { +offset +size }
+MemoryAllocator --> MemoryBlock
+@enduml

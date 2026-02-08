@@ -1,0 +1,5 @@
+@startuml
+class ParkingLot { +parkVehicle(vehicleId,type) +leaveSpot(spotId) }
+class Spot { +park(vehicleId) +leave() }
+ParkingLot --> Spot
+@enduml

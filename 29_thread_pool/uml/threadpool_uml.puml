@@ -1,0 +1,3 @@
+@startuml
+class ThreadPool { +submit(task) }
+@enduml

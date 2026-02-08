@@ -1,0 +1,8 @@
+@startuml
+interface LogSink { +write(level,msg) }
+class ConsoleSink
+LogSink <|-- ConsoleSink
+
+class Logger { +log(level,msg) }
+Logger --> LogSink
+@enduml

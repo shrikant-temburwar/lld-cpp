@@ -1,0 +1,5 @@
+@startuml
+class Game { +play(r,c) +winner() }
+class Board { +place(r,c,symbol) +winner() }
+Game --> Board
+@enduml

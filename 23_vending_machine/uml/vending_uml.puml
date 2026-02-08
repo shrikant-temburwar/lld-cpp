@@ -1,0 +1,7 @@
+@startuml
+class VendingMachine { +insertCoin(amount) +select(productId) +refund() }
+class Inventory { +addProduct(p,count) +hasStock(id) }
+class Product { +id +price }
+VendingMachine --> Inventory
+Inventory --> Product
+@enduml

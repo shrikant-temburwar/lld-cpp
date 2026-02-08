@@ -1,0 +1,5 @@
+@startuml
+class TaskScheduler { +schedule(task) +runOnce() }
+class Task { +id +delayMs }
+TaskScheduler --> Task
+@enduml
