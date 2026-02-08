@@ -1,0 +1,7 @@
+@startuml
+class RateLimiter {
+  -maxTokens
+  -refillInterval
+  +allow(clientId)
+}
+@enduml

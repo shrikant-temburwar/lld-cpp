@@ -1,0 +1,9 @@
+@startuml
+class UploadSession { +start() +uploadChunk(i) +complete() }
+class UploadManager { +createSession(fileId, totalChunks) }
+
+enum UploadState { Init, InProgress, Complete }
+
+UploadManager --> UploadSession
+UploadSession --> UploadState
+@enduml

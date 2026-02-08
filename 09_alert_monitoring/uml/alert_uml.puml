@@ -1,0 +1,13 @@
+@startuml
+interface AlertRule { +matches(event) +message(event) }
+class ThresholdRule
+AlertRule <|-- ThresholdRule
+
+interface AlertChannel { +send(message) }
+class ConsoleChannel
+AlertChannel <|-- ConsoleChannel
+
+class AlertManager { +onMetric(event) }
+AlertManager --> AlertRule
+AlertManager --> AlertChannel
+@enduml

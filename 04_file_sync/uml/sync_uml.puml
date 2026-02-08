@@ -1,0 +1,12 @@
+@startuml
+interface FileEventListener { +onChange(path) }
+class FileWatcher
+FileWatcher --> FileEventListener
+
+interface ConflictStrategy { +resolve(local, remote) }
+class LastWriteWins
+ConflictStrategy <|-- LastWriteWins
+
+class SyncService { +sync(path) }
+SyncService --> ConflictStrategy
+@enduml

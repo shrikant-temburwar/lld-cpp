@@ -1,0 +1,10 @@
+@startuml
+class User { +id +groups }
+class Group { +id }
+class Permissions { +u +g +o }
+class PermissionManager { +canRead(user, perms) +canWrite(...) }
+interface PermissionStrategy { +allow(user, perms, action) }
+class StrictStrategy
+PermissionStrategy <|-- StrictStrategy
+PermissionManager --> PermissionStrategy
+@enduml

@@ -1,0 +1,10 @@
+@startuml
+interface SearchCriteria { +match(node) }
+class NameCriteria
+class ContentCriteria
+SearchCriteria <|-- NameCriteria
+SearchCriteria <|-- ContentCriteria
+
+class SearchService { +search(root, criteria) }
+SearchService --> SearchCriteria
+@enduml

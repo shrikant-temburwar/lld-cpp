@@ -1,0 +1,8 @@
+@startuml
+class ReadWriteLock {
+  +lockRead()
+  +unlockRead()
+  +lockWrite()
+  +unlockWrite()
+}
+@enduml

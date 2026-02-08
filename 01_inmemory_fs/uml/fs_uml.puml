@@ -1,0 +1,36 @@
+@startuml
+class FileSystem {
+  +createFile(path)
+  +createDir(path)
+  +readFile(path)
+  +writeFile(path, data)
+  +delete(path)
+  +list(path)
+}
+
+abstract class Node {
+  -name
+  -parent
+  +getName()
+  +getPath()
+}
+
+class FileNode {
+  -data
+  +read()
+  +write(data)
+}
+
+class DirNode {
+  -children
+  +addChild(node)
+  +removeChild(name)
+  +getChild(name)
+  +list()
+}
+
+Node <|-- FileNode
+Node <|-- DirNode
+FileSystem --> Node
+DirNode --> Node
+@enduml

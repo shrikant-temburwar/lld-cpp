@@ -1,0 +1,11 @@
+@startuml
+interface ChatObserver { +onMessage(message) }
+class User
+ChatObserver <|-- User
+
+class ChatRoom { +join(user) +leave(user) +send(message) }
+ChatRoom --> ChatObserver
+
+class ChatService { +getOrCreateRoom(roomId) }
+ChatService --> ChatRoom
+@enduml

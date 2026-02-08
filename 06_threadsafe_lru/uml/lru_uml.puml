@@ -1,0 +1,9 @@
+@startuml
+class LRUCache {
+  -capacity
+  -order
+  -map
+  +get(key)
+  +put(key, value)
+}
+@enduml
