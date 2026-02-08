@@ -1,0 +1,8 @@
+@startuml
+interface EvictionStrategy { +onGet(key) +onPut(key) +onRemove(key) +evictKey() }
+class LRUEviction
+EvictionStrategy <|-- LRUEviction
+
+class Cache { +get(key) +put(key,value) }
+Cache --> EvictionStrategy
+@enduml

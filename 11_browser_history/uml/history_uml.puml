@@ -1,0 +1,10 @@
+@startuml
+class BrowserHistory {
+  -history
+  -index
+  +visit(url)
+  +back(steps)
+  +forward(steps)
+  +current()
+}
+@enduml

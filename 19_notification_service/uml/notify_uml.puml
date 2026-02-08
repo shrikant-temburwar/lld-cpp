@@ -1,0 +1,8 @@
+@startuml
+interface Channel { +send(notification) }
+class EmailChannel
+Channel <|-- EmailChannel
+
+class NotificationService { +notify(notification) }
+NotificationService --> Channel
+@enduml

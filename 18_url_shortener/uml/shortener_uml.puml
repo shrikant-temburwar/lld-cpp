@@ -1,0 +1,7 @@
+@startuml
+class UrlShortener { +shorten(url) +resolve(code) }
+class IdGenerator { +next() }
+class UrlRepository { +save(code,url) +get(code) }
+UrlShortener --> IdGenerator
+UrlShortener --> UrlRepository
+@enduml

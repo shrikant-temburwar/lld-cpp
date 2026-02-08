@@ -1,0 +1,8 @@
+@startuml
+interface ParseStrategy { +parse(content) }
+class CsvParser
+ParseStrategy <|-- CsvParser
+
+class FileParser { +parse(content) }
+FileParser --> ParseStrategy
+@enduml

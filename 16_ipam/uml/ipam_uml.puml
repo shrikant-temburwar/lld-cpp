@@ -1,0 +1,5 @@
+@startuml
+class IpPool { +allocate() +release(ip) }
+class IpManager { +requestIp(clientId) +releaseIp(clientId) }
+IpManager --> IpPool
+@enduml

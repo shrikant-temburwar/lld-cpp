@@ -1,0 +1,9 @@
+@startuml
+class LudoGame { +addPlayer(p) +start() +playTurn() }
+class Player { +pieces }
+class Piece { +move(steps) }
+class Dice { +roll() }
+LudoGame --> Player
+Player --> Piece
+LudoGame --> Dice
+@enduml

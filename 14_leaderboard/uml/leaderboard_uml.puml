@@ -1,0 +1,5 @@
+@startuml
+class Leaderboard { +submitScore(userId, score) +getRank(userId) +topN(n) }
+class Entry { +userId +score }
+Leaderboard --> Entry
+@enduml

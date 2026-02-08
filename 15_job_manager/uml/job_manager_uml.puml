@@ -1,0 +1,5 @@
+@startuml
+class JobManager { +registerType(cfg) +startJob(type) +finishJob(runId) }
+class IdGenerator { +next() }
+JobManager --> IdGenerator
+@enduml

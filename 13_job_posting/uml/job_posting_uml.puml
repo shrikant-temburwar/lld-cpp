@@ -1,0 +1,9 @@
+@startuml
+class JobService { +postJob(job) +getJob(id) }
+class JobRepository { +save(job) +get(id) }
+interface JobValidator { +validate(job) }
+class BasicValidator
+JobValidator <|-- BasicValidator
+JobService --> JobRepository
+JobService --> JobValidator
+@enduml
